@@ -1,1 +1,33 @@
-{"cleanUrls":true,"trailingSlash":false,"headers":[{"source":"/(.*)", "headers":[{"key":"Cache-Control","value":"public, max-age=3600, stale-while-revalidate=86400"}]}]}
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    { "source": "/(.*\\.html|/|/[^./]*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] },
+    { "source": "/wp-content/(.*\\.css)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=60, must-revalidate" }] },
+    { "source": "/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }] }
+  ],
+  "redirects": [
+    { "source": "/index.php/:path*", "destination": "/", "permanent": true },
+    { "source": "/index.php", "destination": "/", "permanent": true },
+    { "source": "/xmlrpc.php", "destination": "/", "permanent": true },
+    { "source": "/wp-login.php", "destination": "/", "permanent": true },
+    { "source": "/wp-admin/:path*", "destination": "/", "permanent": true },
+    { "source": "/feed", "destination": "/", "permanent": true },
+    { "source": "/feed/:path*", "destination": "/", "permanent": true },
+    { "source": "/about-us", "destination": "/#about", "permanent": false },
+    { "source": "/contact-us", "destination": "/#contact", "permanent": false },
+    { "source": "/pest-control", "destination": "/#services", "permanent": false },
+    { "source": "/bed-bugs", "destination": "/#services", "permanent": false },
+    { "source": "/mosquitos", "destination": "/#services", "permanent": false },
+    { "source": "/termites", "destination": "/#services", "permanent": false },
+    { "source": "/cockroach", "destination": "/#services", "permanent": false },
+    { "source": "/cricket-control", "destination": "/#services", "permanent": false },
+    { "source": "/pricing", "destination": "/", "permanent": false },
+    { "source": "/coupons", "destination": "/", "permanent": false },
+    { "source": "/faq", "destination": "/", "permanent": false },
+    { "source": "/testimonials", "destination": "/", "permanent": false },
+    { "source": "/reviews", "destination": "/", "permanent": false },
+    { "source": "/careers", "destination": "/", "permanent": false },
+    { "source": "/gallery", "destination": "/", "permanent": false }
+  ]
+}
