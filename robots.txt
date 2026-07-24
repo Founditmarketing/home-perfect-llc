@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+Sitemap: https://homeperfectllc.com/sitemap.xml
